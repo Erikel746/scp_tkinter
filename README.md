@@ -1,4 +1,4 @@
-# scp_ttkinter
+# scp_tkinter
 
 A small Tkinter gui for scp file sharing.
 
