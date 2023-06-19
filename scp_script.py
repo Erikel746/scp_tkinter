@@ -46,14 +46,14 @@ def scp_go(check):
 
             if check:
                 try:
-                    scp.put(data[0], data[1])
+                    scp.put(data[0], data[1], recursive=True)
                 except:
                     print("fail")
             else:
                 try:
-                    scp.get(data[1], data[0])
-                except:
-                    print("fail")
+                    scp.get(data[1], data[0],recursive=True)
+                except Exception as e:
+                    print(e)
 
             scp.close()
             succes_label = ttk.Label(root, text="Success!")
